@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Desktop Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Desktop Icons -->
+  <div class="desktop-icons">
+    <div class="icon" data-app="thispc"><img src="icons/thispc.png" /><span>This PC</span></div>
+    <div class="icon" data-app="garena"><img src="icons/garena.png" /><span>Garena</span></div>
+    <div class="icon" data-app="chatgpt"><img src="icons/chatgpt.png" /><span>ChatGPT</span></div>
+    <div class="icon" data-app="bluestacks"><img src="icons/bluestacks.png" /><span>Bluestacks 5</span></div>
+    <div class="icon" data-app="msi"><img src="icons/msi.png" /><span>MSI App</span></div>
+    <div class="icon" data-app="minecraft"><img src="icons/minecraft.png" /><span>Minecraft</span></div>
+    <div class="icon" data-app="profile"><img src="icons/folder.png" /><span>Profile</span></div>
+  </div>
+
+  <!-- Taskbar -->
+  <div class="taskbar">
+    <div class="taskbar-start"><img src="icons/start.png" width="32"/></div>
+    <div class="taskbar-apps" id="taskbar-apps"></div>
+    <input type="file" id="musicFile" accept=".mp3" style="margin-left: auto;" />
+    <audio id="audioPlayer" controls style="height: 32px;"></audio>
+  </div>
+
+  <!-- App Windows -->
+  <div id="app-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

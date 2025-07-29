@@ -1,0 +1,209 @@
+/* style.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url('image/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.desktop-icons {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  width: 80px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.icon img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 5px;
+  transition: transform 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  z-index: 2;
+}
+
+.taskbar-start {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.taskbar-apps {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.taskbar-icon img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s;
+}
+
+.taskbar-icon:hover img {
+  transform: scale(1.2);
+}
+
+.app-window {
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  resize: both;
+  animation: openWindow 0.3s ease-out;
+}
+
+@keyframes openWindow {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.app-window.maximized {
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: calc(100% - 40px) !important;
+}
+
+.title-bar {
+  height: 30px;
+  background: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  cursor: move;
+  flex-shrink: 0;
+}
+
+.window-controls button {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.profile-folder {
+  padding: 10px;
+}
+
+.profile-folder button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.profile-folder button:hover {
+  background-color: #e0e0e0;
+}
+
+#profile-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+#profile-info li a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#profile-info li a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive icon font */
+.icon span {
+  font-size: 12px;
+  margin-top: 2px;
+  word-break: break-word;
+  text-transform: capitalize;
+}
+
+/* Folder content section */
+.folder-content {
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.folder-section {
+  display: none;
+}
+
+.folder-section.active {
+  display: block;
+}
+
+/* Maintenance message styling */
+.maintenance {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #666;
+  background-color: #f9f9f9;
+}
+
+/* Draggable */
+.app-window.draggable {
+  user-select: none;
+}
