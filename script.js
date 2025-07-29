@@ -2,9 +2,9 @@ const apps = {
   thispc: "Đang bảo trì...",
   garena: "Đang bảo trì...",
   chatgpt: "Đang bảo trì...",
-  bluestacks: "Đang bảo trì...",
-  msi: "Đang bảo trì...",
-  minecraft: "Đang bảo trì...",
+  bluestacks: "Không chơi được fifai đâu...",
+  msi: "Không chơi được fi5 đâu...",
+  minecraft: "Không  chơi được...",
   profile: `
     <div class="profile-folder">
       <button onclick="showProfileInfo('info')">Giới thiệu</button>
